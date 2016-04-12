@@ -16,6 +16,7 @@ session_start();
         
  require_once('./Przegladanie.php');
  echo date("r");
+ $_SESSION["tr"]=null;
  $prz = new Przegladanie('ogloszenia','j23','ogloszenia','localhost');
  echo ($prz->link());
  $l = $prz->lista();

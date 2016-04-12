@@ -24,12 +24,26 @@ echo date("r",$przyszly); // Wyświetli datę 'za godzinę'
 		mysql_query('delete from ogloszenia where id_o='.intval($id_o).' limit 1');
 	}
 
-	function zmien($id){
-		$zmiana = mysql_fetch_assoc(mysql_query('select tresc , waznosc from ogloszenia where id_u='));
-		
-		mysql_query('update ogloszenia set tresc =\'.$tresc.\' where id='.$id);
-	      mysql_query('update ogloszenia set waznosc =\'.$waznosc.\' where id='.$id);
+	function znajdz($id_o){
+            echo $id_o;
+            $sql="select * from ogloszenia where id_o = '$id_o'";
+            $query= mysql_query($sql);
+         $row=mysql_fetch_assoc($query);
+         //print_r ($row);
+		 $aa= $row['tresc'];
+               //$_SESSION["tresc"]=$aa;
+               return $aa;
+               
+              // $_SESSION["id_u"]=$row['id_u'];
+              //  $_SESSION["login"]=$row['login'];
+               // return $wynik;
+	//	mysql_query('update ogloszenia set tresc =\'.$tresc.\' where id='.$id_o);
+	   //   mysql_query('update ogloszenia set waznosc =\'.$waznosc.\' where id='.$id_o);
         }
+        
+        
+        
+        
      function listaWlasna($id_u) {
 		$ret = array();
                 $q = mysql_query("select * from ogloszenia where id_u = '$id_u' order by 'id_o'");

@@ -31,7 +31,7 @@ and open the template in the editor.
      
         }
         ?>
-        <form action="indexZmienH.php?akcjaZ=zmianaHasla" method="post">
+        <form action="indexZmienHaslo.php?akcjaZ=zmianaHasla" method="post">
     <label for="hasloStare">Hasło stare</label> <input type="text" name="hasloStare" />
     <label for="hasloNowe">Hasło nowe</label> <input type="text" name="hasloNowe" />
  <input type="submit" value="Zmień hasło" />

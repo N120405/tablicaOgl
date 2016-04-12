@@ -3,7 +3,7 @@
 
 class Przegladanie {
     var $handle;
-     public  static $id_static ;
+      
 	function __construct($dbuser,$dbpass,$dbname,$dbhost){
 		$this->handle = mysql_connect($dbhost,$dbuser,$dbpass) or die('zle dane do bazy');
 		$tmp = mysql_select_db($dbname,$this->handle) or die('zla baza danych');
