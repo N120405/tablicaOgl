@@ -11,7 +11,7 @@
     
     <a href="index.php"> powrót do przeglądania ogłoszeń</a></br>
      <a href="Wyloguj.php">wyloguj</a>    
-     <form action="indexOgloszeniaWlasne.php?akcjaEd=dodaj" method="post">
+     <form action="indexOgloszeniaWlasne.php?akcjaE=dodaj" method="post">
  <label for="tresc">Treść ogłoszenia</label><p><textarea cols="100" rows="10" name="tresc"></textarea></p> 
  <label for="waznosc">ważność</label>
  <input type="text" name="waznosc" />
@@ -25,7 +25,7 @@
  
 
  
- if (isset($_GET['akcjaEd'])){
+ /*if (isset($_GET['akcjaEd'])){
 	switch($_GET['akcjaEd']){
 	 case 'dodaj':
 		$ed->dodaj($_SESSION["id_u"],$_POST['tresc'],$_POST['waznosc']);
@@ -39,7 +39,7 @@
              echo $wynik;
 		break;
 	}
- }
+ } */
  if (isset($_GET['akcjaE'])){
 	switch($_GET['akcjaE']){
 	 case 'dodaj':
