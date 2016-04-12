@@ -8,6 +8,7 @@ class Logowanie {
 	function __construct($dbuser,$dbpass,$dbname,$dbhost){
 		$this->handle3 = mysql_connect($dbhost,$dbuser,$dbpass) or die('zle dane do bazy');
 		$tmp = mysql_select_db($dbname,$this->handle3) or die('zla baza danych');
+               
 	}
 
 	function sprawdz_u($login,$haslo){
@@ -32,8 +33,22 @@ return $id_u;
 function link(){   
     if (isset($_SESSION["id_u"])) {
             if ($_SESSION["id_u"] <> null) {
-                return '<a href="indexEdycja.php"> Edycja ogłoszeń</a></br> <h3>zalogowany  ' . $_SESSION["login"] . '</h3>';
-            }
+                return '<a href="index.php"> powrót do przeglądania ogłoszeń</a></br>
+  <a href="indexEdycja.php"> Edycja ogłoszeń</a></br><a href="Wyloguj.php">wyloguj</a> </br>
+  <a href="indexZmienH.php"> zmiana hasła</a></br>
+     <a href="UsunLog.php">usuń</a> <h3>zalogowany  ' . $_SESSION["login"] . '</h3>';
+    }}
+            else {
+                
+       return ' <form action="indexLog.php?akcjaL=sprawdz_u" method="post">
+ <label for="login">login</label>
+ <input type="text" name="login" />
+ <label for="haslo">hasło</label>
+ <input type="password" name="haslo" />
+ <input type="submit" value="Zaloguj" />
+</form>  ';
+                
+            
         }
         // print_r ($_SESSION);
         }

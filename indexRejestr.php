@@ -12,7 +12,7 @@
  require_once('./Rejestracja.php');
  $rej = new Rejestracja('ogloszenia','j23','ogloszenia','localhost');
  
- if (isset($_GET['akcja']))
+ if (isset($_GET['akcjaR']))
      {    $a=  $rej->spr_u($_POST['login']);
      if (isset ($a ))
      {echo "<h3>Taki login już w bazie istnieje</h3>";}
@@ -27,7 +27,7 @@
  
 
 ?>
-<form action="indexRejestr.php?akcja=dodaj_u" method="post">
+<form action="indexRejestr.php?akcjaR=dodaj_u" method="post">
     <label for="login">Login</label> <input type="text" name="login" />
     <label for="haslo">Hasło</label> <input type="text" name="haslo" />
  <input type="submit" value="Dodaj użytkownika" />

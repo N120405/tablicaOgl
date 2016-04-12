@@ -9,8 +9,8 @@
 <body>
     <h1> Tablica ogłoszeń</h1>
     
-     <a href="index.php"> powrót do przeglądania ogłoszeń</a>
-     
+    <a href="index.php"> powrót do przeglądania ogłoszeń</a></br>
+     <a href="Wyloguj.php">wyloguj</a>    
      <form action="indexEdycja.php?akcja=dodaj" method="post">
  <label for="tresc">Treść ogłoszenia</label><p><textarea cols="100" rows="10" name="tresc"></textarea></p> 
  <label for="waznosc">ważność</label>
@@ -46,7 +46,7 @@
 
 print_r($_SESSION["id_u"]);
 
- $lw = $ed->listaWlasna($_SESSION["id_u"]);
+$lw = $ed->listaWlasna($_SESSION["id_u"]);
  
  echo('<ul>');
  foreach($lw as $item){

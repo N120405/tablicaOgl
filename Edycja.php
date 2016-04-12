@@ -29,8 +29,8 @@ echo date("r",$przyszly); // Wyświetli datę 'za godzinę'
 		
 		mysql_query('update ogloszenia set tresc =\'.$tresc.\' where id='.$id);
 	      mysql_query('update ogloszenia set waznosc =\'.$waznosc.\' where id='.$id);
-    
-    function listaWlasna($id_u){
+        }
+     function listaWlasna($id_u) {
 		$ret = array();
                 $q = mysql_query("select * from ogloszenia where id_u = '$id_u' order by 'id_o'");
 		while ($txt = mysql_fetch_assoc($q)){
@@ -39,7 +39,9 @@ echo date("r",$przyszly); // Wyświetli datę 'za godzinę'
 		return $ret;
 	}
         }
-        
-}
+
+ 
+
+
 
 ?>
