@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 
 class OgloszeniaWlasne {//extends Przegladanie{
     function __construct($dbuser,$dbpass,$dbname,$dbhost){
@@ -30,15 +30,11 @@ echo date("r",$przyszly); // Wyświetli datę 'za godzinę'
             $query= mysql_query($sql);
          $row=mysql_fetch_assoc($query);
          //print_r ($row);
-		 $aa= $row['tresc'];
-               //$_SESSION["tresc"]=$aa;
+	 $aa= $row['tresc'];
+               //  echo $aa;
+              // $_SESSION['tresc']=$aa;
                return $aa;
-               
-              // $_SESSION["id_u"]=$row['id_u'];
-              //  $_SESSION["login"]=$row['login'];
-               // return $wynik;
-	//	mysql_query('update ogloszenia set tresc =\'.$tresc.\' where id='.$id_o);
-	   //   mysql_query('update ogloszenia set waznosc =\'.$waznosc.\' where id='.$id_o);
+      
         }
         
         

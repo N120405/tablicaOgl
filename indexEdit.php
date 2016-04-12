@@ -17,13 +17,12 @@ and open the template in the editor.
         
        require_once('./Edit.php'); 
        $edit = new Edit ('ogloszenia','j23','ogloszenia','localhost');
-        $tr= $_SESSION["tr"];
-    //    $_SESSION["id_u"]=$row['id_u'];
+        $tresc= $_SESSION["tresc"];
     //  $_SESSION["login"]=$row['login'];
-        
-        echo $tr;
-        $aaa=" <form action=\"indexOgloszeniaWlasne.php?akcjaZ=zmien\" method=\"post\" >
-<label for= \"tresc\"  >Treść ogłoszenia</label></br><textarea cols=\"100\" rows=\"10\" name=\"tresc\">'$tr'</textarea>
+     echo $_SESSION["tresc"];
+        //$tr="aaaaaaaaaaaaaaaaaaaaaaaaaa";
+        $aaa=" <form action=\"indexEdit.php?akcjaZ=zmien\" method=\"post\" >
+<label for= \"tresc\"  >Treść ogłoszenia</label></br><textarea cols=\"100\" rows=\"10\" name=\"tresc\">'$tresc'</textarea>
  </br><label for=\"waznosc\">ważność</label><input type=\"text\" name=\"waznosc\" />
  <input type=\"submit\" value=\"zatwierdź zmiany\" /> 
 </form> " ;
@@ -35,7 +34,7 @@ and open the template in the editor.
 	
 	 case 'zmien':
        
-        $edit->zmiana($_GET['id_o']); 
+       // $edit->zmiana($_GET['id_o']); 
          
 		break;
 	}
@@ -48,4 +47,11 @@ and open the template in the editor.
   
         ?>
     </body>
+     <form action="indexEdit.php?akcjaE=zmirn" method="post">
+ <label for="tresc">Treść ogłoszenia</label><p><textarea cols="100" rows="10" name="tresc"></textarea></p> 
+ <label for="waznosc">ważność</label>
+ <input type="text" name="waznosc" />
+ <input type="submit" value="Zatwierdź zmiany" />
+</form>    
+    
 </html>
