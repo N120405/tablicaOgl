@@ -10,7 +10,7 @@
 </head>
 <body>
     <h1> Tablica ogłoszeń</h1>
-    <h2> logowanie</h2>
+   
    
     
    <?php    

@@ -22,7 +22,7 @@ class Przegladanie {
  function link(){   
     if (isset($_SESSION["id_u"])) {
             if ($_SESSION["id_u"] <> null) {
-                return '<a href="indexEdycja.php"> Edycja ogłoszeń</a></br> <h3>zalogowany  ' . $_SESSION["login"] . '</h3>';
+                return '<a href="indexOgloszeniaWlasne.php"> Edycja ogłoszeń</a></br> <h3>zalogowany  ' . $_SESSION["login"] . '</h3>';
             }        
         }
         else return '<h3><a href="indexRejestr.php"> rejestracja</a></br> <a href="indexLog.php"> logowanie</a></h3>';

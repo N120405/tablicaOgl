@@ -13,6 +13,7 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
+        <h2 href="index.php">Wylogowanie przebiegło poprawnie</h2>
         <a href="index.php"> powrót do przeglądania ogłoszeń</a>
         <?php
          $_SESSION["id_u"]=null;

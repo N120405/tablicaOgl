@@ -35,13 +35,14 @@ function link(){
     if (isset($_SESSION["id_u"])) {
             if ($_SESSION["id_u"] <> null) {
                 return '<a href="index.php"> powrót do przeglądania ogłoszeń</a></br>
-  <a href="indexEdycja.php"> Edycja ogłoszeń</a></br><a href="Wyloguj.php">wyloguj</a> </br>
+  <a href="indexOgloszeniaWlasne.php"> Edycja ogłoszeń</a></br><a href="Wyloguj.php">wyloguj</a> </br>
   <a href="indexZmienH.php"> zmiana hasła</a></br>
      <a href="IndexUsunUzytkownika.php">usuń</a> <h3>zalogowany  ' . $_SESSION["login"] . '</h3>';
     }}
             else {
                 
-       return ' <form action="indexLog.php?akcjaL=sprawdz_u" method="post">
+       return ' <h2> logowanie</h2></br> <a href="index.php"> powrót do przeglądania ogłoszeń</a></br>
+           <form action="indexLog.php?akcjaL=sprawdz_u" method="post">
  <label for="login">login</label>
  <input type="text" name="login" />
  <label for="haslo">hasło</label>
