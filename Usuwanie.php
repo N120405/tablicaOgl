@@ -7,35 +7,36 @@
  */
 
 /**
- * Description of Prejestracja
+ * Description of Usuwanie
  *
  * @author c
  */
-class Rejestracja {
-  var $handle3;
+class Usuwanie {
+    var $handle3;
 //private $a = 10;
 	function __construct($dbuser,$dbpass,$dbname,$dbhost){
 		$this->handle3 = mysql_connect($dbhost,$dbuser,$dbpass) or die('zle dane do bazy');
 		$tmp = mysql_select_db($dbname,$this->handle3) or die('zla baza danych');
 	}
         
-        
-        function spr_u($login)
-        {
-                  $sql = "select * from uzytkownik where login = '$login' ";
-           $query= mysql_query($sql);
-      $row=mysql_fetch_assoc($query);
-      $a=$row['id_u'];
-        return $a;
-        
-        }
       
-	function dodaj_u($login,$haslo)
-        {$sql = "insert into uzytkownik values(null,'$login','$haslo');";
-           
-            mysql_query($sql);
-            }
+        
+        
+	function usun_uzytkownika($id_u){
+          //  $sql ="delete  from ogloszenia where id_u = '$id_u'";
+            
+           mysql_query('delete from ogloszenia where id_u='.intval($id_u));
+            
+          //  mysql_query($sql);
+		 $sql ="delete  from uzytkownik where id_u= '$id_u'";
+                 
+                mysql_query($sql);
+	}
+        
+        
 
+	
+	
 	}
 
 

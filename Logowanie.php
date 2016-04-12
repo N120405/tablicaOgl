@@ -29,14 +29,15 @@ class Logowanie {
 $id_u=$row['id_u'];
 return $id_u;
     }
-	
+
+    
 function link(){   
     if (isset($_SESSION["id_u"])) {
             if ($_SESSION["id_u"] <> null) {
                 return '<a href="index.php"> powrót do przeglądania ogłoszeń</a></br>
   <a href="indexEdycja.php"> Edycja ogłoszeń</a></br><a href="Wyloguj.php">wyloguj</a> </br>
   <a href="indexZmienH.php"> zmiana hasła</a></br>
-     <a href="UsunLog.php">usuń</a> <h3>zalogowany  ' . $_SESSION["login"] . '</h3>';
+     <a href="IndexUsunUzytkownika.php">usuń</a> <h3>zalogowany  ' . $_SESSION["login"] . '</h3>';
     }}
             else {
                 
