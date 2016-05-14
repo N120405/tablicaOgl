@@ -48,7 +48,7 @@ if ($aaaa<>null){
  $aaa=" <form action=\"indexOgloszeniaWlasne.php?akcjaZ=zmien\" method=\"post\" >
 <label for= \"tresc\"  >Treść ogłoszenia</label></br><textarea cols=\"100\" rows=\"10\" name=\"tresc\">'$tresc'</textarea>
  </br><label for=\"waznosc\">ważność</label><input type=\"text\" name=\"waznosc\" />
- <input type=\"submit\" value=\"zatwierdź zmiany\" /> 
+ <input type=\"submit\" class=\"btn btn-primary\" value=\"zatwierdź zmiany\" /> 
 </form> " ;}
 else{$aaa="";}
 echo $aaa;
@@ -56,9 +56,9 @@ print_r($_SESSION["id_u"]);
 
 $lw = $ed->listaWlasna($_SESSION["id_u"]);
  
- echo('<ul>');
+ echo('<ul class="list-group">');
  foreach($lw as $item){
- echo('<li>'.$item['tresc'].'</br>'.$item['data'].'</br>'.$item['waznosc'].'<a href="indexOgloszeniaWlasne.php?akcjaE=zmien&id_o='.$item['id_o'].'">zmien</a><a href="indexOgloszeniaWlasne.php?akcjaE=usun&id_o='.$item['id_o'].'">usun</a></li>');
+ echo('<li class="list-group-item">'.$item['tresc'].'</br>'.$item['data'].'</br>'.$item['waznosc'].'<a href="indexOgloszeniaWlasne.php?akcjaE=zmien&id_o='.$item['id_o'].'">zmien</a><a href="indexOgloszeniaWlasne.php?akcjaE=usun&id_o='.$item['id_o'].'">usun</a></li>');
 }
 echo('</ul>'
             

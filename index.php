@@ -22,10 +22,10 @@ session_start();
  $prz = new Przegladanie('ogloszenia','j23','ogloszenia','localhost');
  echo ($prz->link());
  $l = $prz->lista();
- echo('<ul>');
+ echo('<ul class="list-group">');
  foreach($l as $item){
 // echo "$item <br/>";
- echo('<li>'.$item['tresc'].'</br>'.$item['data'].'</li>');
+ echo('<li class="list-group-item">'.$item['tresc'].'</br>'.$item['data'].'</li>');
 }
 echo('</ul>'
             
