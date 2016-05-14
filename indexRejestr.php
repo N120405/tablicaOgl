@@ -2,6 +2,7 @@
 <head>
 <meta charset="utf-8" />
 <title>Tablica ogłoszeń</title>
+<link rel="stylesheet" href="/ogloszenia/bootstrap/css/bootstrap.css">
 </head>
 <body>
     <h1> Tablica ogłoszeń</h1>
@@ -28,9 +29,17 @@
 
 ?>
 <form action="indexRejestr.php?akcjaR=dodaj_u" method="post">
+    <fildset>
+     <div class= "form-group">
     <label for="login">Login</label> <input type="text" name="login" />
+    </div>
+    <div class= "form-group">
     <label for="haslo">Hasło</label> <input type="text" name="haslo" />
- <input type="submit" value="Dodaj użytkownika" />
+ </div>
+         <div class= "form-group">
+    <input type="submit" class="btn btn-primary" value="Dodaj użytkownika" />
+    </div>
+    </fildset>
 </form>
 </body></html>
 

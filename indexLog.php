@@ -7,6 +7,7 @@
 <head>
 <meta charset="utf-8" />
 <title>Tablica ogłoszeń</title>
+<link rel="stylesheet" href="/ogloszenia/bootstrap/css/bootstrap.css">
 </head>
 <body>
     <h1> Tablica ogłoszeń</h1>

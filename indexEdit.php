@@ -11,6 +11,7 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title></title>
+       <link rel="stylesheet" href="/ogloszenia/bootstrap/css/bootstrap.css">
     </head>
     <body>
         <?php
