@@ -7,7 +7,7 @@
 <head>
 <meta charset="utf-8" />
 <title>Tablica ogłoszeń</title>
-<link rel="stylesheet" href="/ogloszenia/bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
     <h1> Tablica ogłoszeń</h1>
@@ -34,7 +34,8 @@
 echo ($log->link());
      
 ?>
-
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
 </body>
 </html>
 
