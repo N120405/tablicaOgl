@@ -22,10 +22,38 @@ class Przegladanie {
  function link(){   
     if (isset($_SESSION["id_u"])) {
             if ($_SESSION["id_u"] <> null) {
-                return '<a href="indexOgloszeniaWlasne.php"> Edycja ogłoszeń</a></br> <h3>zalogowany  ' . $_SESSION["login"] . '</h3>';
+              
+ return '<div class="navbar navbar-default">
+<div class="container-fluid">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar-content">
+<span class="icon-bar"></span>
+</button>
+<div class="collapse navbar-collapse" id="mynavbar-content">
+<ul class="nav navbar-nav">
+<li ><a href="indexOgloszeniaWlasne.php">Edycja ogłoszeń</a></li>
+<li><a href="Wyloguj.php">Wyloguj</a></li>
+</ul>
+</div>
+</div>
+</div></br> <h3>zalogowany  ' . $_SESSION["login"] . '</h3>';               
+                
             }        
         }
-        else return '<h3><a href="indexRejestr.php"> rejestracja</a></br> <a href="indexLog.php"> logowanie</a></h3>';
+        else return '<div class="navbar navbar-default">
+<div class="container-fluid">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar-content">
+<span class="icon-bar"></span>
+</button>
+<div class="collapse navbar-collapse" id="mynavbar-content">
+<ul class="nav navbar-nav">
+<li ><a href="indexLog.php">Logowanie</a></li>
+<li><a href="indexRejestr.php">Rejestracja</a></li>
+</ul>
+</div>
+</div>
+</div>';
         }
 }
  

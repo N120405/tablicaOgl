@@ -21,30 +21,11 @@ session_start();
 <body>
  
   <div class="container">
-      
-<div class="navbar navbar-default">
-<div class="container-fluid">
-<div class="navbar-header">
-<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar-content">
-<span class="icon-bar"></span>
-
-</button>
-
-<div class="collapse navbar-collapse" id="mynavbar-content">
-<ul class="nav navbar-nav">
-<li class="active"><a href="indexLog.php">Logowanie</a></li>
-
-<li><a href="indexRejestr.php">Rejestracja</a></li>
-
-</ul>
-</div>
-</div>
-</div>
-      
-<div class="row">
+     
+  
+      <div class="row">
 <div class="col-md-12 text-center">
     <h1> Tablica ogłoszeń</h1>
-  
         <?php
         
  require_once('./Przegladanie.php');
@@ -66,7 +47,8 @@ echo('</ul>'
  </div>
 </div>
 </div>  
-  <script src="js/jquery.js"></script>
+<script src="js/jquery.js"></script>
 <script src="js/bootstrap.js"></script> 
-</body></html>
+</body>
+  </html>
 

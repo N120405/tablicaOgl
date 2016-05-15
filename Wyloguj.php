@@ -11,6 +11,7 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title></title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     </head>
     <body>
         <h2 href="index.php">Wylogowanie przebiegło poprawnie</h2>
@@ -19,5 +20,7 @@ and open the template in the editor.
          $_SESSION["id_u"]=null;
       $_SESSION["login"]=null;
         ?>
+      <script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>   
     </body>
 </html>
