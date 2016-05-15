@@ -35,10 +35,28 @@ return $id_u;
 function link(){   
     if (isset($_SESSION["id_u"])) {
             if ($_SESSION["id_u"] <> null) {
-                return '<a href="index.php"> powrót do przeglądania ogłoszeń</a></br>
+                
+                return '<div class="navbar navbar-default">
+<div class="container-fluid">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar-content">
+<span class="icon-bar"></span>
+</button>
+<div class="collapse navbar-collapse" id="mynavbar-content">
+<ul class="nav navbar-nav">
+<li ><a href="index.php">powrót do przeglądania ogłoszeń</a></li>
+<li><a href="Wyloguj.php">wyloguj</a></li>
+<li><a href="indexZmienHaslo.php">zmiana hasła</a></li>
+</ul>
+</div>
+</div>
+</div>';
+        /*        return '<a href="index.php"> powrót do przeglądania ogłoszeń</a></br>
   <a href="indexOgloszeniaWlasne.php"> Edycja ogłoszeń</a></br><a href="Wyloguj.php">wyloguj</a> </br>
   <a href="indexZmienHaslo.php"> zmiana hasła</a></br>
-     <a href="IndexUsunUzytkownika.php">usuń</a> <h3>zalogowany  ' . $_SESSION["login"] . '</h3>';
+     <a href="IndexUsunUzytkownika.php">usuń</a> <h3>zalogowany  ' . $_SESSION["login"] . '</h3>';*/
+                
+                
     }}
             else {
                 

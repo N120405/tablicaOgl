@@ -11,9 +11,21 @@ session_start();
 </head>
 <body>
     <h1> Tablica ogłoszeń</h1>
-    
-    <a href="index.php"> powrót do przeglądania ogłoszeń</a></br>
-     <a href="Wyloguj.php">wyloguj</a>    
+ <div class="navbar navbar-default">
+<div class="container-fluid">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar-content">
+<span class="icon-bar"></span>
+</button>
+<div class="collapse navbar-collapse" id="mynavbar-content">
+<ul class="nav navbar-nav">
+<li ><a href="index.php">powrót do przeglądania ogłoszeń</a></li>
+<li><a href="Wyloguj.php">wyloguj</a></li>
+</ul>
+</div>
+</div>
+</div>
+     
      <form action="indexOgloszeniaWlasne.php?akcjaE=dodaj" method="post">
  <label for="tresc">Treść ogłoszenia</label><p><textarea cols="100" rows="10" name="tresc"></textarea></p> 
  <label for="waznosc">ważność</label>

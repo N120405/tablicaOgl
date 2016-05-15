@@ -28,9 +28,10 @@ session_start();
   echo ($prz->link());
   ?>
    
-
-    <h1> Tablica ogłoszeń</h1>
-  
+<div class="page-header">
+<h1>Tablica ogłoszeń</h1>
+</div>
+   
         <?php
         
  require_once('./Przegladanie.php');

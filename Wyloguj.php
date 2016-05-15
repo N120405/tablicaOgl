@@ -14,8 +14,12 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     </head>
     <body>
-        <h2 href="index.php">Wylogowanie przebiegło poprawnie</h2>
-        <a href="index.php"> powrót do przeglądania ogłoszeń</a>
+        <div class="alert alert-success alert-dismissable">
+<button type="button" class="close" data-dismiss="alert">&times;</button>
+Wylogowanie przebiegło poprawnie. <a href="index.php" class="alert-link"> Powrót do przeglądania ogłoszeń</a>
+</div>
+       
+       
         <?php
          $_SESSION["id_u"]=null;
       $_SESSION["login"]=null;
