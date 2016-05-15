@@ -36,7 +36,7 @@ class Przegladanie {
 </ul>
 </div>
 </div>
-</div></br> <h3>zalogowany  ' . $_SESSION["login"] . '</h3>';               
+</div> <h4> Zalogowany <span class="label label-default">'.$_SESSION["login"] . '</span></h4>';               
                 
             }        
         }

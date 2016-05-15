@@ -19,20 +19,25 @@ session_start();
 
 </head>
 <body>
- 
-  <div class="container">
-     
-  
-      <div class="row">
+   <div class="container"> 
+       <div class="row">
 <div class="col-md-12 text-center">
+<?php  
+  require_once('./Przegladanie.php');
+   $prz = new Przegladanie('ogloszenia','j23','ogloszenia','localhost');
+  echo ($prz->link());
+  ?>
+   
+
     <h1> Tablica ogłoszeń</h1>
+  
         <?php
         
  require_once('./Przegladanie.php');
  echo date("r");
  $_SESSION["tresc"]="123";
  $prz = new Przegladanie('ogloszenia','j23','ogloszenia','localhost');
- echo ($prz->link());
+ //echo ($prz->link());
  $l = $prz->lista();
  echo('<ul class="list-group">');
  foreach($l as $item){
