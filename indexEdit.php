@@ -2,11 +2,7 @@
 session_start();
 ?>
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
 <html>
     <head>
         <meta charset="UTF-8">
@@ -49,7 +45,7 @@ and open the template in the editor.
         ?>
     </body>
      <form action="indexEdit.php?akcjaE=zmirn" method="post">
- <label for="tresc">Treść ogłoszenia</label><p><textarea cols="100" rows="10" name="tresc"></textarea></p> 
+ <label for="tresc">2 Nowa treść ogłoszenia</label><p><textarea cols="100" rows="10" name="tresc"></textarea></p> 
  <label for="waznosc">ważność</label>
  <input type="text" name="waznosc" />
  <input type="submit" value="Zatwierdź zmiany" />

@@ -1,5 +1,7 @@
 <?php
 session_start();
+$h1="<h1> Ogłoszenia użytkownika ".$_SESSION["login"]."</h1>";
+echo $h1 ; 
 ?>
 <!doctype html>
 <html>
@@ -10,7 +12,6 @@ session_start();
 <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
-    <h1> Tablica ogłoszeń</h1>
  <div class="navbar navbar-default">
 <div class="container-fluid">
 <div class="navbar-header">
@@ -27,9 +28,9 @@ session_start();
 </div>
      
      <form action="indexOgloszeniaWlasne.php?akcjaE=dodaj" method="post">
- <label for="tresc">Treść ogłoszenia</label><p><textarea cols="100" rows="10" name="tresc"></textarea></p> 
- <label for="waznosc">ważność</label>
- <input type="text" name="waznosc" />
+ <label for="tresc">Treść nowego ogłoszenia</label><p><textarea cols="102" rows="10" name="tresc"></textarea></p> 
+ <label for="waznoscD">Liczba dni ważności ogłoszenia (maksymalnie 90 dni)</label>
+ <input type="text"  name="waznoscD" />
  <input type="submit" class="btn btn-primary" value="Dodaj ogłoszenie" />
 </form>    
      
@@ -42,7 +43,7 @@ session_start();
  if (isset($_GET['akcjaE'])){
 	switch($_GET['akcjaE']){
 	 case 'dodaj':
-		$ed->dodaj($_SESSION["id_u"],$_POST['tresc'],$_POST['waznosc']);
+		$ed->dodaj($_SESSION["id_u"],$_POST['tresc'],$_POST['waznoscD']);
 		break;
 	 case 'usun':
 		$ed->usun($_GET['id_o']);
@@ -56,15 +57,25 @@ session_start();
        }break;
 	}
  }
+ 
+  if (isset($_GET['akcjaZ'])){
+	switch($_GET['akcjaZ']){
+	
+	 case 'zmienOgloszenie':
+        $ed->zmienOgloszenie($_SESSION["id_o"],$_POST['tresc'],$_POST['waznoscD']);
+		break;
+	}
+ }
+ 
 if ($aaaa<>null){
- $aaa=" <form action=\"indexOgloszeniaWlasne.php?akcjaZ=zmien\" method=\"post\" >
-<label for= \"tresc\"  >Treść ogłoszenia</label></br><textarea cols=\"100\" rows=\"10\" name=\"tresc\">'$tresc'</textarea>
- </br><label for=\"waznosc\">ważność</label><input type=\"text\" name=\"waznosc\" />
+ $aaa=" <form action=\"indexOgloszeniaWlasne.php?akcjaZ=zmienOgloszenie\" method=\"post\" >
+<label for= \"tresc\"  >Nowa treść ogłoszenia</label></br><textarea cols=\"100\" rows=\"10\" name=\"tresc\">'$tresc'</textarea>
+ </br><label for=\"waznosc\">Nowa ważność</label><input type=\"text\" name=\"waznoscD\" />
  <input type=\"submit\" class=\"btn btn-primary\" value=\"zatwierdź zmiany\" /> 
 </form> " ;}
 else{$aaa="";}
 echo $aaa;
-print_r($_SESSION["id_u"]);
+//print_r($_SESSION["id_u"]);
 
 $lw = $ed->listaWlasna($_SESSION["id_u"]);
  
