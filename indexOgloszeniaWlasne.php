@@ -69,7 +69,7 @@ echo $h1 ;
  
 if ($aaaa<>null){
  $aaa=" <form action=\"indexOgloszeniaWlasne.php?akcjaZ=zmienOgloszenie\" method=\"post\" >
-<label for= \"tresc\"  >Nowa treść ogłoszenia</label></br><textarea cols=\"100\" rows=\"10\" name=\"tresc\">'$tresc'</textarea>
+<label for= \"tresc\"  >Nowa treść ogłoszenia</label></br><textarea cols=\"100\" rows=\"10\" name=\"tresc\">$tresc</textarea>
  </br><label for=\"waznosc\">Nowa ważność</label><input type=\"text\" name=\"waznoscD\" />
  <input type=\"submit\" class=\"btn btn-primary\" value=\"zatwierdź zmiany\" /> 
 </form> " ;}
