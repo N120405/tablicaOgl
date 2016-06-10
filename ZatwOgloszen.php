@@ -68,12 +68,20 @@ $waznosc = date("Y-m-d",$waznoscOgloszenia);
       
         }
         
+       function zmienStan($id_o){
+		$akt = mysql_fetch_assoc(mysql_query('select widocznosc from ogloszenia where id_o ='.intval($id_o).' limit 1'));
+		if ($akt['widocznosc']=='T'){
+			$nw = 'N';
+		} else {
+			$nw = 'T';
+		}
+		mysql_query('update ogloszenia set widocznosc=\''.$nw.'\' where id_o='.intval($id_o).' limit 1');
+	} 
         
         
-        
-     function listaWlasna($id_u) {
+     function listaOgloszen() {
 		$ret = array();
-                $q = mysql_query("select * from ogloszenia " );//where widocznosc =null "//where id_u = '$id_u' "
+                $q = mysql_query("select * from ogloszenia order by widocznosc " );//where widocznosc =null "//where id_u = '$id_u' "
                       //  . "order by id_o DESC;");
 		while ($txt = mysql_fetch_assoc($q)){
 			$ret[] = $txt;

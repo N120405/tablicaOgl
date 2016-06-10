@@ -12,7 +12,7 @@ class Przegladanie {
    
 	function lista(){
 		$ret = array();
-		$q = mysql_query("select * from ogloszenia order by data desc;");
+		$q = mysql_query("select * from ogloszenia where widocznosc = 'T' order by data desc;");
 		while ($txt = mysql_fetch_assoc($q)){
                    // echo"$txt";
 			$ret[] = $txt;

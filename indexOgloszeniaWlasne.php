@@ -82,7 +82,7 @@ $lw = $ed->listaWlasna($_SESSION["id_u"]);
  
  echo('<ul class="list-group">');
  foreach($lw as $item){
- echo('<li class="list-group-item">'.$item['tresc'].'</br>'.$item['data'].'</br>'.$item['waznosc'].'<a href="indexOgloszeniaWlasne.php?akcjaE=zmien&id_o='.$item['id_o'].'">zmien</a><a href="indexOgloszeniaWlasne.php?akcjaE=usun&id_o='.$item['id_o'].'">usun</a></li>');
+ echo('<li class="list-group-item">'.$item['tresc'].'</br>'.$item['data'].'</br>'.$item['waznosc'].'<a href="indexOgloszeniaWlasne.php?akcjaE=zmien&id_o='.$item['id_o'].'"> Zmien </a><a href="indexOgloszeniaWlasne.php?akcjaE=usun&id_o='.$item['id_o'].'"> Usun </a></li>');
 }
 echo('</ul>'
             

@@ -28,12 +28,7 @@ echo $h1 ;
 </div>
 </div>
      
-     <form action="indexOgloszeniaWlasne.php?akcjaE=dodaj" method="post">
- <label for="tresc">Treść nowego ogłoszenia</label><p><textarea cols="102" rows="10" name="tresc"></textarea></p> 
- <label for="waznoscD">Liczba dni ważności ogłoszenia (maksymalnie 90 dni)</label>
- <input type="text"  name="waznoscD" />
- <input type="submit" class="btn btn-primary" value="Dodaj ogłoszenie" />
-</form>    
+ 
      
  <?php
         $aaaa="";
@@ -56,6 +51,10 @@ echo $h1 ;
          $tresc=$aaaa;
        //$_SESSION["tresc"] =$aaaa[tresc]  ;
        }break;
+   case 'zmienS':
+		$zatwOglosz->zmienStan($_GET['id_o']);
+		break;
+   
 	}
  }
  
@@ -78,15 +77,25 @@ else{$aaa="";}
 echo $aaa;
 //print_r($_SESSION["id_u"]);
 
-$lw = $zatwOglosz->listaWlasna($_SESSION["id_u"]);
+$lw = $zatwOglosz->listaOgloszen();
  
- echo('<ul class="list-group">');
- foreach($lw as $item){
- echo('<li class="list-group-item">'.$item['tresc'].'</br>'.$item['data'].'</br>'.$item['waznosc'].'<a href="indexOgloszeniaWlasne.php?akcjaE=zmien&id_o='.$item['id_o'].'">zmien</a><a href="indexOgloszeniaWlasne.php?akcjaE=usun&id_o='.$item['id_o'].'">usun</a></li>');
-}
-echo('</ul>'
-            
-      );
+ //echo('<ul>');
+echo('<ul class="list-group">');
+ foreach($lw as $element){
+  if ($element['widocznosc']=='T'){
+	$widocznosc1 = 'x';
+  } else {
+	$widocznosc1 = ' ';
+  }
+ //echo('<li class="list-group-item">'.$element['tresc'].'<a href="indexZatwOgloszen.php?akcjaE=zmienS&id_o='.$element['id_o'].'">['.$widocznosc1.']</a> <a href="index.php?akcja=usun&id_o='.$element['id_o'].'">usun</a></li>');
+ echo('<li class="list-group-item">'.$element['tresc'].'</br>'.$element['data'].'</br>'.$element['waznosc'].'<a href="indexZatwOgloszen.php?akcjaE=zmienS&id_o='.$element['id_o'].'"> ['.$widocznosc1.'] </a><a href="indexZatwOgloszen.php?akcjaE=zmien&id_o='.$element['id_o'].'"> Zmien </a><a href="indexZatwOgloszen.php?akcjaE=usun&id_o='.$element['id_o'].'"> Usun </a></li>');
+ 
+  }
+ echo('</ul>');
+
+ //echo('<li class="list-group-item">'.$element['tresc'].'</br>'.$element['data'].'</br>'.$element['waznosc'].'<a href="indexOgloszeniaWlasne.php?akcjaE=zmien&id_o='.$element['id_o'].'">zmien</a><a href="indexOgloszeniaWlasne.php?akcjaE=usun&id_o='.$element['id_o'].'">usun</a></li>');
+//}
+// echo('</ul>' );
 
 
 ?>
