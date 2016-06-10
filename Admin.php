@@ -28,7 +28,7 @@ class Admin {
 <div class="collapse navbar-collapse" id="mynavbar-content">
 <ul class="nav navbar-nav">
 <li ><a href="indexOgloszeniaWlasne.php">Edycja ogłoszeń</a></li>
-<li ><a href="indexOgloszeniaWlasne.php">Zatwierdzanie ogłoszeń</a></li>
+<li ><a href="indexZatwOgloszen.php">Zatwierdzanie ogłoszeń</a></li>
 <li ><a href="indexOgloszeniaWlasne.php">usuwanie użytkowników</a></li>
 <li><a href="Wyloguj.php">Admin Wyloguj</a></li>
 </ul>
