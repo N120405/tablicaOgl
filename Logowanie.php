@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+ require_once('./Admin.php');
 class Logowanie {
     
    
@@ -19,8 +19,13 @@ class Logowanie {
            $query= mysql_query($sql);
          $row=mysql_fetch_assoc($query);
          //echo ($row[id_u]);
+if (($login == "admin") &&($row['haslo'] == $haslo)){
+   
+   $adm = new Admin('ogloszenia','j23','ogloszenia','localhost');
+  echo ($adm->linkA());
+};
 
-       if ($row['haslo'] == $haslo){ $k="Witaj ".$login; 
+       if ( ($login != "") and ($row['haslo'] == $haslo)){ $k="Witaj ".$login; 
       $_SESSION["id_u"]=$row['id_u'];
       $_SESSION["login"]=$row['login'];
                ;} else {$k= "blad logowania";}
@@ -44,6 +49,7 @@ function link(){
 </button>
 <div class="collapse navbar-collapse" id="mynavbar-content">
 <ul class="nav navbar-nav">
+<li ><a href="indexOgloszeniaWlasne.php">Edycja ogłoszeń</a></li>
 <li ><a href="index.php">powrót do przeglądania ogłoszeń</a></li>
 <li><a href="Wyloguj.php">wyloguj</a></li>
 <li><a href="indexZmienHaslo.php">zmiana hasła</a></li>
@@ -60,7 +66,7 @@ function link(){
     }}
             else {
                 
-       return ' <h2> logowanie</h2></br> <a href="index.php"> powrót do przeglądania ogłoszeń</a></br>
+       return ' <h2> Logowanie</h2></br> <a href="index.php"> powrót do przeglądania ogłoszeń</a></br>
            <form action="indexLog.php?akcjaL=sprawdz_u" method="post">
         <div class= "form-group">
  <label for="login">login</label>
@@ -72,14 +78,8 @@ function link(){
  </div>
  <input type="submit" class="btn btn-primary" value="Zaloguj" />
 </form>  ';
-                
-            
+                       
         }
-        // print_r ($_SESSION);
-        }
- 
-	
-	
+        }	
 	}
-
 ?>

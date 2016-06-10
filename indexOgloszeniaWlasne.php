@@ -8,7 +8,7 @@ echo $h1 ;
 
 <head>
 <meta charset="utf-8" />
-<title>Tablica ogłoszeń</title>
+<title>Ogłoszenia użytkownika</title>
 <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
@@ -22,6 +22,7 @@ echo $h1 ;
 <ul class="nav navbar-nav">
 <li ><a href="index.php">powrót do przeglądania ogłoszeń</a></li>
 <li><a href="Wyloguj.php">wyloguj</a></li>
+<li><a href="ZmienHaslo.php">zmiana hasła</a></li>
 </ul>
 </div>
 </div>

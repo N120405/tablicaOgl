@@ -6,13 +6,11 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>Tablica ogłoszeń</title>
+<title>Logowanie</title>
 <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
-    <h1> Tablica ogłoszeń</h1>
-   
-   
+    
     
    <?php    
  

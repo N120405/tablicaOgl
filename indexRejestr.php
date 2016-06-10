@@ -1,12 +1,11 @@
 <!doctype html>
 <head>
 <meta charset="utf-8" />
-<title>Tablica ogłoszeń</title>
+<title>Rejestracja</title>
 <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
-    <h1> Tablica ogłoszeń</h1>
-    <h2> rejestracja</h2>
+    <h2> Rejestracja</h2>
     <a href="index.php"> powrót do przeglądania ogłoszeń</a>
     <a href="indexLog.php"> Zaloguj się </a>
         <?php

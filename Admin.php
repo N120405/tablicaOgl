@@ -7,11 +7,11 @@
  */
 
 /**
- * Description of Edit
+ * Description of Admin
  *
  * @author c
  */
-class Edit {
+class Admin {
    function __construct($dbuser,$dbpass,$dbname,$dbhost){
 		$this->handle = mysql_connect($dbhost,$dbuser,$dbpass) or die('zle dane do bazy');
 		$tmp = mysql_select_db($dbname,$this->handle) or die('zla baza danych');
@@ -19,7 +19,7 @@ class Edit {
    
  
    
-      function link(){   
+      function linkA(){   
     
  return '<div class="navbar navbar-default">
 <div class="container-fluid">
@@ -27,18 +27,14 @@ class Edit {
 
 <div class="collapse navbar-collapse" id="mynavbar-content">
 <ul class="nav navbar-nav">
-<li ><a href="indexOgloszeniaWlasne.php">Admin Edycja ogłoszeń</a></li>
+<li ><a href="indexOgloszeniaWlasne.php">Edycja ogłoszeń</a></li>
+<li ><a href="indexOgloszeniaWlasne.php">Zatwierdzanie ogłoszeń</a></li>
+<li ><a href="indexOgloszeniaWlasne.php">usuwanie użytkowników</a></li>
 <li><a href="Wyloguj.php">Admin Wyloguj</a></li>
 </ul>
 </div>
 </div>
 </div> ';               
            
-
-        }  
-        
-        
-        
-        
-        
+}
 }

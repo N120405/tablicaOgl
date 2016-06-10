@@ -10,10 +10,10 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>Ogloszenia użytkownika</title>
     </head>
     <body>
-         <h1> Tablica ogłoszeń</h1>
+        
     <h2> Uwaga wraz z usunięciem użytkownika zostaną usunięte wszystkie jego ogłoszenia</h2>
     <a href="index.php"> powrót do przeglądania ogłoszeń</a>
     <a href="indexLog.php"> Zaloguj się </a>
