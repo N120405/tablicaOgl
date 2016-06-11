@@ -20,9 +20,9 @@ echo $h1 ;
 </button>
 <div class="collapse navbar-collapse" id="mynavbar-content">
 <ul class="nav navbar-nav">
-<li ><a href="index.php">powrót do przeglądania ogłoszeń</a></li>
-<li><a href="Wyloguj.php">wyloguj</a></li>
-<li><a href="ZmienHaslo.php">zmiana hasła</a></li>
+<li ><a href="index.php"> Powrót do przeglądania ogłoszeń </a></li>
+<li><a href="Wyloguj.php"> Wyloguj </a></li>
+<li><a href="ZmienHaslo.php"> Zmiana hasła </a></li>
 </ul>
 </div>
 </div>

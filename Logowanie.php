@@ -49,10 +49,10 @@ function link(){
 </button>
 <div class="collapse navbar-collapse" id="mynavbar-content">
 <ul class="nav navbar-nav">
-<li ><a href="indexOgloszeniaWlasne.php">Edycja ogłoszeń</a></li>
-<li ><a href="index.php">powrót do przeglądania ogłoszeń</a></li>
-<li><a href="Wyloguj.php">wyloguj</a></li>
-<li><a href="indexZmienHaslo.php">zmiana hasła</a></li>
+<li ><a href="indexOgloszeniaWlasne.php"> Edycja ogłoszeń </a></li>
+<li ><a href="index.php"> Powrót do przeglądania ogłoszeń </a></li>
+<li><a href="Wyloguj.php"> Wyloguj </a></li>
+<li><a href="indexZmienHaslo.php"> Zmiana hasła </a></li>
 </ul>
 </div>
 </div>
@@ -66,14 +66,14 @@ function link(){
     }}
             else {
                 
-       return ' <h2> Logowanie</h2></br> <a href="index.php"> powrót do przeglądania ogłoszeń</a></br>
+       return ' <h2> Logowanie </h2></br> <a href="index.php"> powrót do przeglądania ogłoszeń</a></br>
            <form action="indexLog.php?akcjaL=sprawdz_u" method="post">
         <div class= "form-group">
- <label for="login">login</label>
+ <label for="login"> login </label>
  <input type="text" name="login" />
  </div>
   <div class= "form-group">
- <label for="haslo">hasło</label>
+ <label for="haslo"> hasło </label>
  <input type="password" name="haslo" />
  </div>
  <input type="submit" class="btn btn-primary" value="Zaloguj" />

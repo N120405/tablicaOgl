@@ -31,8 +31,8 @@ class Przegladanie {
 </button>
 <div class="collapse navbar-collapse" id="mynavbar-content">
 <ul class="nav navbar-nav">
-<li ><a href="indexOgloszeniaWlasne.php">Edycja ogłoszeń</a></li>
-<li><a href="Wyloguj.php">Wyloguj</a></li>
+<li ><a href="indexOgloszeniaWlasne.php"> Edycja ogłoszeń </a></li>
+<li><a href="Wyloguj.php"> Wyloguj </a></li>
 </ul>
 </div>
 </div>
@@ -48,8 +48,8 @@ class Przegladanie {
 </button>
 <div class="collapse navbar-collapse" id="mynavbar-content">
 <ul class="nav navbar-nav">
-<li ><a href="indexLog.php">Logowanie</a></li>
-<li><a href="indexRejestr.php">Rejestracja</a></li>
+<li ><a href="indexLog.php"> Logowanie </a></li>
+<li><a href="indexRejestr.php"> Rejestracja </a></li>
 </ul>
 </div>
 </div>

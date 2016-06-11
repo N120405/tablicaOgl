@@ -81,7 +81,7 @@ $waznosc = date("Y-m-d",$waznoscOgloszenia);
         
      function listaOgloszen() {
 		$ret = array();
-                $q = mysql_query("select * from ogloszenia order by widocznosc " );//where widocznosc =null "//where id_u = '$id_u' "
+                $q = mysql_query("select * from ogloszenia order by widocznosc " );
                       //  . "order by id_o DESC;");
 		while ($txt = mysql_fetch_assoc($q)){
 			$ret[] = $txt;

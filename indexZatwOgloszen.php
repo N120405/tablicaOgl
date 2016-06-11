@@ -8,7 +8,7 @@ echo $h1 ;
 
 <head>
 <meta charset="utf-8" />
-<title>Zatwierdzanie Ogłoszeń</title>
+<title> Zatwierdzanie ogłoszeń </title>
 <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
@@ -20,9 +20,9 @@ echo $h1 ;
 </button>
 <div class="collapse navbar-collapse" id="mynavbar-content">
 <ul class="nav navbar-nav">
-<li ><a href="index.php">powrót do przeglądania ogłoszeń</a></li>
-<li><a href="Wyloguj.php">wyloguj</a></li>
-<li><a href="ZmienHaslo.php">zmiana hasła</a></li>
+<li ><a href="IndexUsunUzytkownika.php"> Usuwanie użytkownika </a></li>
+<li><a href="Wyloguj.php"> Wyloguj </a></li>
+<li><a href="ZmienHaslo.php"> Zmiana hasła </a></li>
 </ul>
 </div>
 </div>
@@ -68,7 +68,7 @@ echo $h1 ;
  }
  
 if ($aaaa<>null){
- $aaa=" <form action=\"indexOgloszeniaWlasne.php?akcjaZ=zmienOgloszenie\" method=\"post\" >
+ $aaa=" <form action=\"indexZatwOgloszen.php?akcjaZ=zmienOgloszenie\" method=\"post\" >
 <label for= \"tresc\"  >Nowa treść ogłoszenia</label></br><textarea cols=\"100\" rows=\"10\" name=\"tresc\">$tresc</textarea>
  </br><label for=\"waznosc\">Nowa ważność</label><input type=\"text\" name=\"waznoscD\" />
  <input type=\"submit\" class=\"btn btn-primary\" value=\"zatwierdź zmiany\" /> 
@@ -92,11 +92,6 @@ echo('<ul class="list-group">');
  
   }
  echo('</ul>');
-
- //echo('<li class="list-group-item">'.$element['tresc'].'</br>'.$element['data'].'</br>'.$element['waznosc'].'<a href="indexOgloszeniaWlasne.php?akcjaE=zmien&id_o='.$element['id_o'].'">zmien</a><a href="indexOgloszeniaWlasne.php?akcjaE=usun&id_o='.$element['id_o'].'">usun</a></li>');
-//}
-// echo('</ul>' );
-
 
 ?>
 

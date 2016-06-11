@@ -33,7 +33,14 @@ class Usuwanie {
                 mysql_query($sql);
 	}
         
-        
+        function listaUzytkownikow() {
+		$ret = array();
+                $q = mysql_query("select * from uzytkownik  order by login ASC;");
+		while ($txt = mysql_fetch_assoc($q)){
+			$ret[] = $txt;
+		}
+		return $ret;
+	} 
 
 	
 	

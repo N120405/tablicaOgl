@@ -10,29 +10,36 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Ogloszenia użytkownika</title>
+        <title> Usuwanie użytkownika </title>
     </head>
     <body>
         
     <h2> Uwaga wraz z usunięciem użytkownika zostaną usunięte wszystkie jego ogłoszenia</h2>
-    <a href="index.php"> powrót do przeglądania ogłoszeń</a>
-    <a href="indexLog.php"> Zaloguj się </a>
+    <a href="index.php"> Powrót do przeglądania ogłoszeń </a>
+   
         <?php
        require_once('./Usuwanie.php');
- $usun = new Usuwanie ('ogloszenia','j23','ogloszenia','localhost');
+ $usuwanie = new Usuwanie ('ogloszenia','j23','ogloszenia','localhost');
  
  if (isset($_GET['akcjaU']))
-     {   $id_u= $_SESSION["id_u"];
-         $usun->usun_uzytkownika($id_u);
-        echo "<h3>Użytkownik został usunięty</h3>";
+     {   switch($_GET['akcjaU']){
+     case 'usun':
+         $usuwanie->usun_uzytkownika($_GET['id_u']);
+        echo "<h3> Użytkownik został usunięty </h3>";
            $_SESSION["id_u"]=null;
       $_SESSION["login"]=null;
         
-        }
+     }}
+ $lu = $usuwanie ->listaUzytkownikow();
  
+ echo('<ul class="list-group">');
+ foreach($lu as $item){
+ echo('<li class="list-group-item">'.$item['login'].'<a href="indexUsunUzytkownika.php?akcjaU=usun&id_u='.$item['id_u'].'"> Usun </a></li>');
+}
+echo('</ul>'
+            
+      );
 
 ?>
-<form action="IndexUsunUzytkownika.php?akcjaU=usun_uzytkownika" method="post">
- <input type="submit" value="Usuń użytkownika" />
-</form>
+
 </body></html>
