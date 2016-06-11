@@ -69,14 +69,14 @@ function link(){
        return ' <h2> Logowanie </h2></br> <a href="index.php"> powrót do przeglądania ogłoszeń</a></br>
            <form action="indexLog.php?akcjaL=sprawdz_u" method="post">
         <div class= "form-group">
- <label for="login"> login </label>
+ <label for="login">  login </label>
  <input type="text" name="login" />
  </div>
   <div class= "form-group">
- <label for="haslo"> hasło </label>
+ <label for="haslo">  hasło </label>
  <input type="password" name="haslo" />
  </div>
- <input type="submit" class="btn btn-primary" value="Zaloguj" />
+ <input type="submit" class="btn btn-primary" value=" Zaloguj " />
 </form>  ';
                        
         }
