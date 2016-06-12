@@ -2,12 +2,10 @@
 <head>
 <meta charset="utf-8" />
 <title>Rejestracja</title>
-<link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
-    <h2> Rejestracja</h2>
-    <a href="index.php"> powrót do przeglądania ogłoszeń</a>
-    <a href="indexLog.php"> Zaloguj się </a>
+    
         <?php
  require_once('./Rejestracja.php');
  $rej = new Rejestracja('ogloszenia','j23','ogloszenia','localhost');
@@ -27,13 +25,32 @@
  
 
 ?>
+    
+            <div class="navbar navbar-default">
+<div class="container-fluid">
+<div class="navbar-header">
+
+<div class="collapse navbar-collapse" id="mynavbar-content">
+<ul class="nav navbar-nav">
+  
+ <li><a href="indexLog.php">Zaloguj się </a></li>
+ <li><a href="index.php"> powrót do przeglądania ogłoszeń</a></li>
+ </ul>
+ </br><h2> Rejestracja</h2>
+
+</div>
+</div>
+</div>;
+    
+    
+    
 <form action="indexRejestr.php?akcjaR=dodaj_u" method="post">
     <fildset>
      <div class= "form-group">
-    <label for="login">Login</label> <input type="text" name="login" />
+    <label for="login"> Login </label><input type="text" name="login" value="Nazwisko i Imię"/>
     </div>
     <div class= "form-group">
-    <label for="haslo">Hasło</label> <input type="text" name="haslo" />
+    <label for="haslo"> Hasło </label> <input type="text" name="haslo" />
  </div>
          <div class= "form-group">
     <input type="submit" class="btn btn-primary" value="Dodaj użytkownika" />

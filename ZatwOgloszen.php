@@ -27,9 +27,7 @@ class ZatwOgloszen {//extends Przegladanie{
 $waznoscOgloszenia = time() + 60*60*24* $waznoscD;
 $waznosc = date("Y-m-d",$waznoscOgloszenia);
 	 $sql="insert into ogloszenia values(null,'$id_u','$tresc','$data','$waznosc',null);";
-         mysql_query($sql);
-	//.mysql_real_escape_string($tresc,$this->handle)
-                
+         mysql_query($sql);        
         }
         
       
@@ -47,8 +45,6 @@ $waznoscOgloszenia = time() + 60*60*24* $waznoscD;
 $waznosc = date("Y-m-d",$waznoscOgloszenia);
 	 $sql="update ogloszenia  set  tresc= '$tresc' , waznosc= '$waznosc' where  id_o= '$id_o' ";   
          mysql_query($sql);
-	//.mysql_real_escape_string($tresc,$this->handle)
-                
         }
 	function usun($id_o){
 		mysql_query('delete from ogloszenia where id_o='.intval($id_o).' limit 1');
@@ -81,7 +77,7 @@ $waznosc = date("Y-m-d",$waznoscOgloszenia);
         
      function listaOgloszen() {
 		$ret = array();
-                $q = mysql_query("select * from ogloszenia order by widocznosc " );
+                $q = mysql_query("select * from ogloszenia order by widocznosc" );
                       //  . "order by id_o DESC;");
 		while ($txt = mysql_fetch_assoc($q)){
 			$ret[] = $txt;

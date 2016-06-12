@@ -3,16 +3,17 @@
 
 class Przegladanie {
     var $handle;
-      
+    
 	function __construct($dbuser,$dbpass,$dbname,$dbhost){
 		$this->handle = mysql_connect($dbhost,$dbuser,$dbpass) or die('zle dane do bazy');
 		$tmp = mysql_select_db($dbname,$this->handle) or die('zla baza danych');
 	}
 
-   
+  
 	function lista(){
+            $dzis= date("Y-m-d");
 		$ret = array();
-		$q = mysql_query("select * from ogloszenia where widocznosc = 'T' order by data desc;");
+		$q = mysql_query("select o.id_o, o.tresc , o.data , o.waznosc , o.widocznosc , u.login from ogloszenia o,  uzytkownik u where o.id_u = u.id_u and o.widocznosc = 'T' and o.waznosc >= $dzis order by data desc;");
 		while ($txt = mysql_fetch_assoc($q)){
                    // echo"$txt";
 			$ret[] = $txt;

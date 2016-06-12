@@ -11,11 +11,28 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title> Usuwanie użytkownika </title>
+        <link rel="stylesheet" href="css/bootstrap.css">
     </head>
     <body>
         
-    <h2> Uwaga wraz z usunięciem użytkownika zostaną usunięte wszystkie jego ogłoszenia</h2>
-    <a href="index.php"> Powrót do przeglądania ogłoszeń </a>
+   <div class="navbar navbar-default">
+<div class="container-fluid">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar-content">
+<span class="icon-bar"></span>
+</button>
+<div class="collapse navbar-collapse" id="mynavbar-content">
+<ul class="nav navbar-nav">
+<li ><a href="IndexZatwOgloszen.php"> Zatwierdzanie i edycja ogłoszeń </a></li>
+<li><a href="Wyloguj.php"> Wyloguj </a></li>
+<li><a href="index.php"> Powrót do przeglądania ogłoszeń </a></li>
+</ul>
+</div>
+</div>
+</div>      
+        
+    <h3> Uwaga wraz z usunięciem użytkownika zostaną usunięte wszystkie jego ogłoszenia ! </h3>
+   
    
         <?php
        require_once('./Usuwanie.php');
@@ -34,7 +51,7 @@ and open the template in the editor.
  
  echo('<ul class="list-group">');
  foreach($lu as $item){
- echo('<li class="list-group-item">'.$item['login'].'<a href="indexUsunUzytkownika.php?akcjaU=usun&id_u='.$item['id_u'].'"> Usun </a></li>');
+ echo('<li class="list-group-item">'.$item['login'].'</br><a href="indexUsunUzytkownika.php?akcjaU=usun&id_u='.$item['id_u'].'"> Usun </a></li>');
 }
 echo('</ul>'
             

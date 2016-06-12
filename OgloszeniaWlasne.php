@@ -9,14 +9,14 @@ class OgloszeniaWlasne {//extends Przegladanie{
    
    
   function dodaj($id_u,$tresc,$waznoscD){
-      
+      $widocznosc="N";
       $data = date("Y-m-d");
     if($waznoscD>90)$waznoscD=90;
       if($waznoscD<1)$waznoscD=30;
       
 $waznoscOgloszenia = time() + 60*60*24* $waznoscD;
 $waznosc = date("Y-m-d",$waznoscOgloszenia);
-	 $sql="insert into ogloszenia values(null,'$id_u','$tresc','$data','$waznosc',null);";
+	 $sql="insert into ogloszenia values(null,'$id_u','$tresc','$data','$waznosc','$widocznosc');";
          mysql_query($sql);
 	//.mysql_real_escape_string($tresc,$this->handle)
                 
@@ -35,7 +35,8 @@ $waznosc = date("Y-m-d",$waznoscOgloszenia);
       
 $waznoscOgloszenia = time() + 60*60*24* $waznoscD;
 $waznosc = date("Y-m-d",$waznoscOgloszenia);
-	 $sql="update ogloszenia  set  tresc= '$tresc' , waznosc= '$waznosc' where  id_o= '$id_o' ";   
+$widocznosc="N";
+	 $sql="update ogloszenia  set  tresc= '$tresc' , waznosc= '$waznosc' , widocznosc = '$widocznosc' where  id_o= '$id_o' ";   
          mysql_query($sql);
 	//.mysql_real_escape_string($tresc,$this->handle)
                 
